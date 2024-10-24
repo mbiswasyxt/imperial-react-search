@@ -17,13 +17,13 @@ const getUniversalLimit = () => {
 };
 
 export const SearchUtils = ({
-  vertical = undefined,
+  vertical = "location",
   query = undefined,
   searchActions,
 }: SearchUtilProps) => {
   if (query) searchActions.setQuery(query);
   if (vertical && vertical !== "universal") {
-    searchActions.setVertical("location");
+    searchActions.setVertical(vertical);
     searchActions.executeVerticalQuery();
   } else {
     searchActions.setUniversal();
