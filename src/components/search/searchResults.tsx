@@ -63,7 +63,6 @@ const SearchResults = () => {
     };
     return classesMap[pageType];
   };
-
   return (
     <div className="px-4 ">
       {isLoading ? (

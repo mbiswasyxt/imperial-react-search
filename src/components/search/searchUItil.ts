@@ -23,7 +23,7 @@ export const SearchUtils = ({
 }: SearchUtilProps) => {
   if (query) searchActions.setQuery(query);
   if (vertical && vertical !== "universal") {
-    searchActions.setVertical(vertical);
+    searchActions.setVertical("location");
     searchActions.executeVerticalQuery();
   } else {
     searchActions.setUniversal();
